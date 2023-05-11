@@ -1,0 +1,121 @@
+<!DOCTYPE html> <html><head>
+        <title>What dog breed are you?</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+        <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+</style>
+    <style>body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0ffce;
+    text-align: center;
+}
+
+img {
+    width: 250px;
+}
+
+.result {
+    display: none;
+}
+.pitbull{
+display:none;
+}
+.maltese{
+    display:none;
+}
+.ck{
+	display:none;
+}
+.lr{
+    display:none;
+}
+.ch{
+    display:none;
+}
+.corgi{
+    display:none;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>What dog breed are you?</h1>
+        </div>
+        <div class="questions">
+            <h4>Are you an Introvert, Extrovert, or both?</h4>
+            <img src="https://assets-global.website-files.com/5a690960b80baa0001e05b0f/5c5d94c8c1c7eb5f52e4177b_introvert-extrovert-leaders.png">
+            <input placeholder="Type here" class="comment">
+
+
+            <h4>What do you like to do in your free time?
+            (shop, read, being with friends, all)</h4>
+            <img src="https://media.wired.com/photos/5955c3573ff99d6b3a1d165c/3:2/w_1600%2Cc_limit/books.jpg">
+            <input placeholder="Type here" class="comment2">
+            <button class="submit">Click to see what dog breed you got!!!</button>
+        </div>
+        <div class="result">
+            this is where the user will see their quiz result!
+        </div>
+        <div class="pitbull">
+            <img src="https://www.pitbullinfo.org/uploads/7/8/9/7/7897520/pitbull-dog-facts-1_orig.jpg">
+        </div>
+	<div class="maltese">
+        <img src="https://images.unsplash.com/photo-1621878135994-8b56a55d4af5?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bWFsdGVzZSUyMGRvZ3xlbnwwfHwwfHw%3D&amp;w=1000&amp;q=80">
+        </div>
+       <div class="ck">
+        <img src="https://media-be.chewy.com/wp-content/uploads/2021/06/02112758/Cavalier-King-Charles-Spaniel-FeaturedImage-1024x615.jpg">
+        </div>
+       <div class="lr">
+           <img src="https://hellobark.com/wp-content/uploads/labrador-retriever-3-1024x683.jpg">
+                </div>
+        <div class="ch">
+            <img src="https://media-be.chewy.com/wp-content/uploads/2021/04/01194930/chihuahua-puppy-playing-1024x615.jpg">
+        </div>
+        
+        <div class="corgi">
+            <img src="https://www.purina.com.au/-/media/project/purina/main/breeds/puppies/puppy-chihuahua/puppy-corgi.jpg">
+        </div>
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var submitButton = document.querySelector(".submit");
+var messages = document.querySelector(".result");
+var pitbull = document.querySelector(".pitbull");
+var maltese = document.querySelector(".maltese");
+var ck = document.querySelector(".ck");
+var lr = document.querySelector(".lr");
+var ch = document.querySelector(".ch");
+var corgi = document.querySelector(".corgi");
+
+submitButton.onclick = function () {
+  var comment = document.querySelector(".comment").value;
+  console.log(comment);
+  var box2 = document.querySelector(".comment2").value;
+
+  if (comment === "extrovert" && box2 === "shop") {
+    messages.style.display = "block";
+    messages.innerHTML = "You got Pitbull!";
+    pitbull.style.display = "block";
+  } else if (comment === "introvert" && box2 === "read") {
+    messages.style.display = "block";
+    messages.innerHTML = "You got Maltese!";
+    maltese.style.display = "block";
+  } else if (comment === "both" && box2 === "all") {
+    messages.style.display = "block";
+    messages.innerHTML = "You got cavalier king charles spaniel!";
+    ck.style.display = "block";
+  } else if (comment === "both" && box2 === "being with friends") {
+    messages.style.display = "block";
+    messages.innerHTML = "You got labrador retriever!";
+    lr.style.display = "block";
+  } else if (comment === "introvert" && box2 === "being with friends") {
+    messages.style.display = "block";
+    messages.innerHTML = "You got Chihuahua!";
+    ch.style.display = "block";
+  } else if (comment === "extrovert" && box2 === "read") {
+    messages.style.display = "block";
+    messages.innerHTML = "You got Corgi!";
+    corgi.style.display = "block";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbInN1Ym1pdEJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsIm1lc3NhZ2VzIiwicGl0YnVsbCIsIm1hbHRlc2UiLCJjayIsImxyIiwiY2giLCJjb3JnaSIsIm9uY2xpY2siLCJjb21tZW50IiwidmFsdWUiLCJjb25zb2xlIiwibG9nIiwiYm94MiIsInN0eWxlIiwiZGlzcGxheSIsImlubmVySFRNTCJdLCJtYXBwaW5ncyI6IkFBQUEsSUFBSUEsWUFBWSxHQUFHQyxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsQ0FBbkI7QUFDQSxJQUFJQyxRQUFRLEdBQUdGLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixDQUFmO0FBQ0EsSUFBSUUsT0FBTyxHQUFDSCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsVUFBdkIsQ0FBWjtBQUNBLElBQUlHLE9BQU8sR0FBQ0osUUFBUSxDQUFDQyxhQUFULENBQXVCLFVBQXZCLENBQVo7QUFDQSxJQUFJSSxFQUFFLEdBQUNMLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixLQUF2QixDQUFQO0FBQ0EsSUFBSUssRUFBRSxHQUFDTixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsS0FBdkIsQ0FBUDtBQUNBLElBQUlNLEVBQUUsR0FBQ1AsUUFBUSxDQUFDQyxhQUFULENBQXVCLEtBQXZCLENBQVA7QUFDQSxJQUFJTyxLQUFLLEdBQUNSLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixRQUF2QixDQUFWOztBQUVBRixZQUFZLENBQUNVLE9BQWIsR0FBdUIsWUFBVztBQUM5QixNQUFJQyxPQUFPLEdBQ1BWLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixVQUF2QixFQUFtQ1UsS0FEdkM7QUFFQUMsRUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVlILE9BQVo7QUFDQSxNQUFJSSxJQUFJLEdBQUdkLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixXQUF2QixFQUFvQ1UsS0FBL0M7O0FBRUEsTUFBSUQsT0FBTyxLQUFLLFdBQVosSUFBMkJJLElBQUksS0FBSyxNQUF4QyxFQUFnRDtBQUM1Q1osSUFBQUEsUUFBUSxDQUFDYSxLQUFULENBQWVDLE9BQWYsR0FBeUIsT0FBekI7QUFDQWQsSUFBQUEsUUFBUSxDQUFDZSxTQUFULEdBQXFCLGtCQUFyQjtBQUNBZCxJQUFBQSxPQUFPLENBQUNZLEtBQVIsQ0FBY0MsT0FBZCxHQUFzQixPQUF0QjtBQUNILEdBSkQsTUFLSSxJQUFJTixPQUFPLEtBQUssV0FBWixJQUEyQkksSUFBSSxLQUFLLE1BQXhDLEVBQStDO0FBQy9DWixJQUFBQSxRQUFRLENBQUNhLEtBQVQsQ0FBZUMsT0FBZixHQUF3QixPQUF4QjtBQUNBZCxJQUFBQSxRQUFRLENBQUNlLFNBQVQsR0FBcUIsa0JBQXJCO0FBQ0FiLElBQUFBLE9BQU8sQ0FBQ1csS0FBUixDQUFjQyxPQUFkLEdBQXNCLE9BQXRCO0FBQ0gsR0FKRyxNQUtBLElBQUlOLE9BQU8sS0FBSyxNQUFaLElBQXNCSSxJQUFJLEtBQUssS0FBbkMsRUFBeUM7QUFDekNaLElBQUFBLFFBQVEsQ0FBQ2EsS0FBVCxDQUFlQyxPQUFmLEdBQXdCLE9BQXhCO0FBQ0FkLElBQUFBLFFBQVEsQ0FBQ2UsU0FBVCxHQUFxQix3Q0FBckI7QUFDQVosSUFBQUEsRUFBRSxDQUFDVSxLQUFILENBQVNDLE9BQVQsR0FBaUIsT0FBakI7QUFDSixHQUpJLE1BS0ksSUFBSU4sT0FBTyxLQUFLLE1BQVosSUFBc0JJLElBQUksS0FBSyxvQkFBbkMsRUFBd0Q7QUFDNURaLElBQUFBLFFBQVEsQ0FBQ2EsS0FBVCxDQUFlQyxPQUFmLEdBQXdCLE9BQXhCO0FBQ0FkLElBQUFBLFFBQVEsQ0FBQ2UsU0FBVCxHQUFxQiw2QkFBckI7QUFDQVgsSUFBQUEsRUFBRSxDQUFDUyxLQUFILENBQVNDLE9BQVQsR0FBaUIsT0FBakI7QUFDQSxHQUpJLE1BS0gsSUFBSU4sT0FBTyxLQUFLLFdBQVosSUFBMkJJLElBQUksS0FBSyxvQkFBeEMsRUFBNkQ7QUFDOURaLElBQUFBLFFBQVEsQ0FBQ2EsS0FBVCxDQUFlQyxPQUFmLEdBQXdCLE9BQXhCO0FBQ0FkLElBQUFBLFFBQVEsQ0FBQ2UsU0FBVCxHQUFvQixvQkFBcEI7QUFDQVYsSUFBQUEsRUFBRSxDQUFDUSxLQUFILENBQVNDLE9BQVQsR0FBa0IsT0FBbEI7QUFDSCxHQUpJLE1BS0EsSUFBSU4sT0FBTyxLQUFLLFdBQVosSUFBMkJJLElBQUksS0FBSyxNQUF4QyxFQUErQztBQUNoRFosSUFBQUEsUUFBUSxDQUFDYSxLQUFULENBQWVDLE9BQWYsR0FBd0IsT0FBeEI7QUFDQWQsSUFBQUEsUUFBUSxDQUFDZSxTQUFULEdBQW9CLGdCQUFwQjtBQUNBVCxJQUFBQSxLQUFLLENBQUNPLEtBQU4sQ0FBWUMsT0FBWixHQUFxQixPQUFyQjtBQUNIO0FBQ0EsQ0FwQ0wiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgc3VibWl0QnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5zdWJtaXRcIik7XG5sZXQgbWVzc2FnZXMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKTtcbmxldCBwaXRidWxsPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucGl0YnVsbFwiKTtcbmxldCBtYWx0ZXNlPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIubWFsdGVzZVwiKTtcbmxldCBjaz1kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmNrXCIpO1xubGV0IGxyPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIubHJcIik7XG5sZXQgY2g9ZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5jaFwiKTtcbmxldCBjb3JnaT1kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmNvcmdpXCIpO1xuXG5zdWJtaXRCdXR0b24ub25jbGljayA9IGZ1bmN0aW9uKCkge1xuICAgIGxldCBjb21tZW50ID1cbiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5jb21tZW50XCIpLnZhbHVlO1xuICAgIGNvbnNvbGUubG9nKGNvbW1lbnQpO1xuICAgIGxldCBib3gyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5jb21tZW50MlwiKS52YWx1ZTtcblxuICAgIGlmIChjb21tZW50ID09PSBcImV4dHJvdmVydFwiICYmIGJveDIgPT09IFwic2hvcFwiKSB7XG4gICAgICAgIG1lc3NhZ2VzLnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG4gICAgICAgIG1lc3NhZ2VzLmlubmVySFRNTCA9IFwiWW91IGdvdCBQaXRidWxsIVwiO1xuICAgICAgICBwaXRidWxsLnN0eWxlLmRpc3BsYXk9XCJibG9ja1wiO1xuICAgIH1cbiAgIGVsc2UgaWYgKGNvbW1lbnQgPT09IFwiaW50cm92ZXJ0XCIgJiYgYm94MiA9PT0gXCJyZWFkXCIpe1xuICAgICAgICBtZXNzYWdlcy5zdHlsZS5kaXNwbGF5PSBcImJsb2NrXCI7XG4gICAgICAgIG1lc3NhZ2VzLmlubmVySFRNTCA9IFwiWW91IGdvdCBNYWx0ZXNlIVwiO1xuICAgICAgICBtYWx0ZXNlLnN0eWxlLmRpc3BsYXk9XCJibG9ja1wiO1xuICAgIH1cbiAgIGVsc2UgaWYgKGNvbW1lbnQgPT09IFwiYm90aFwiICYmIGJveDIgPT09IFwiYWxsXCIpe1xuICAgICAgICBtZXNzYWdlcy5zdHlsZS5kaXNwbGF5PSBcImJsb2NrXCI7XG4gICAgICAgIG1lc3NhZ2VzLmlubmVySFRNTCA9IFwiWW91IGdvdCBjYXZhbGllciBraW5nIGNoYXJsZXMgc3BhbmllbCFcIjtcbiAgICAgICAgY2suc3R5bGUuZGlzcGxheT1cImJsb2NrXCI7XG4gICB9XG4gICAgICAgZWxzZSBpZiAoY29tbWVudCA9PT0gXCJib3RoXCIgJiYgYm94MiA9PT0gXCJiZWluZyB3aXRoIGZyaWVuZHNcIil7XG4gICAgICAgIG1lc3NhZ2VzLnN0eWxlLmRpc3BsYXk9IFwiYmxvY2tcIjtcbiAgICAgICAgbWVzc2FnZXMuaW5uZXJIVE1MID0gXCJZb3UgZ290IGxhYnJhZG9yIHJldHJpZXZlciFcIjtcbiAgICAgICAgbHIuc3R5bGUuZGlzcGxheT1cImJsb2NrXCI7XG4gICAgICAgfVxuICAgIGVsc2UgaWYgKGNvbW1lbnQgPT09IFwiaW50cm92ZXJ0XCIgJiYgYm94MiA9PT0gXCJiZWluZyB3aXRoIGZyaWVuZHNcIil7XG4gICAgICAgIG1lc3NhZ2VzLnN0eWxlLmRpc3BsYXk9IFwiYmxvY2tcIjtcbiAgICAgICAgbWVzc2FnZXMuaW5uZXJIVE1MPSBcIllvdSBnb3QgQ2hpaHVhaHVhIVwiO1xuICAgICAgICBjaC5zdHlsZS5kaXNwbGF5PSBcImJsb2NrXCI7XG4gICAgfVxuICAgIGVsc2UgaWYgKGNvbW1lbnQgPT09IFwiZXh0cm92ZXJ0XCIgJiYgYm94MiA9PT0gXCJyZWFkXCIpe1xuICAgICAgICBtZXNzYWdlcy5zdHlsZS5kaXNwbGF5PSBcImJsb2NrXCI7XG4gICAgICAgIG1lc3NhZ2VzLmlubmVySFRNTD0gXCJZb3UgZ290IENvcmdpIVwiO1xuICAgICAgICBjb3JnaS5zdHlsZS5kaXNwbGF5PSBcImJsb2NrXCI7XG4gICAgfVxuICAgIH07XG5cdCJdfQ==</script></body></html>
