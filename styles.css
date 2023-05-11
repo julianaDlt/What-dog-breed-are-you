@@ -1,0 +1,31 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0ffce;
+    text-align: center;
+}
+
+img {
+    width: 250px;
+}
+
+.result {
+    display: none;
+}
+.pitbull{
+display:none;
+}
+.maltese{
+    display:none;
+}
+.ck{
+	display:none;
+}
+.lr{
+    display:none;
+}
+.ch{
+    display:none;
+}
+.corgi{
+    display:none;
+}
